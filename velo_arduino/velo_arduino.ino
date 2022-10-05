@@ -6,7 +6,10 @@
 const char *ssid = "Velo";
 const char *password = "pingpong";
 
-int luminosite = 30;
+int luminosite = 100;
+int R,G,B;
+bool clignotantGaucheStatut = false;
+bool clignotantDroitStatut = false;
 
 Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
@@ -49,15 +52,28 @@ void loop() {
   Serial.println(request);
   client.flush();
 
-  if( request.indexOf("/UP") != -1 && luminosite < 240){
+  if( request.indexOf("/LuminositeUp") != -1 && luminosite < 240){
     luminosite += 15;
     Serial.printf("Augmentation luminosite : %d \n", luminosite);
   } 
 
-  if( request.indexOf("/DOWN") != -1 && luminosite > 15){
+  if( request.indexOf("/LuminositeDown") != -1 && luminosite > 15){
     luminosite -= 15 ;
     Serial.printf("Réduction luminosite : %d \n", luminosite);
-  } 
+  }
+
+  if( request.indexOf("/Gauche") != -1){
+    clignotantGaucheStatut = !clignotantGaucheStatut;
+    Serial.print("Bascule clignotant gauche : ");
+    Serial.println(clignotantGaucheStatut);
+  }
+
+  if( request.indexOf("/Droit") != -1){
+    clignotantDroitStatut = !clignotantDroitStatut;
+    Serial.print("Bascule clignotant droit : ");
+    Serial.println(clignotantGaucheStatut);
+  }
+
 
   client.println("HTTP/1.1 200 OK");
   client.println("Content-type:text/html");
@@ -67,9 +83,11 @@ void loop() {
   client.println("<!DOCTYPE html><html>");
   client.println("<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" charset=\"utf-8\"> ");
 
-  client.print("<p>Luminosité : </p>");
-  client.println("Augmenter <a href=\"/UP\">+15</a><br>");
-  client.println("Réduire <a href=\"/DOWN\">-15</a><br>");
+  client.printf("<p>Luminosité : %d </p>",luminosite);
+  client.println("<a href=\"/LuminositeUp\">Augmenter : +15</a><br>");
+  client.println("<a href=\"/LuminsoteDown\">Réduire : -15</a><br>");
+  client.println("<a href=\"/Gauche\">Clignonant gauche </a><br>");
+  client.println("<a href=\"/Droit\">Clignonant droit</a><br>");
   
   client.println("</body></html>");
   client.println();
@@ -77,6 +95,8 @@ void loop() {
   Serial.println("");
     
   clignotement();
+  if(clignotantGaucheStatut) clignotantGauche();
+  if(clignotantDroitStatut) clignotantDroit();
 
 /*
     pixels.setBrightness(100);
