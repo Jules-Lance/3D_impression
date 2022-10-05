@@ -1,12 +1,13 @@
 #include <Adafruit_NeoPixel.h>
 #include <ESP8266WiFi.h>
+#include <ArduinoOTA.h>
 
 #define PIN D1
 #define NUMPIXELS 24
 const char *ssid = "Velo";
 const char *password = "pingpong";
 
-int luminosite = 100;
+int luminosite = 150;
 int R,G,B;
 bool clignotantGaucheStatut = false;
 bool clignotantDroitStatut = false;
@@ -28,17 +29,52 @@ void setup() {
   pixels.fill(pixels.Color(20, 20, 20));
   pixels.show();
 
-  Serial.println("Starting AP");
+  Serial.println("Démarrage du wifi");
   WiFi.softAP(ssid, password,1,false,1);
-  
-  Serial.print("AP IP address: ");
-  Serial.println(WiFi.softAPIP());
+
+  ArduinoOTA.setHostname("esp-velo");
+  ArduinoOTA.setPassword("pingpong");
+
+   ArduinoOTA.onStart([]() {
+    String type;
+    if (ArduinoOTA.getCommand() == U_FLASH) {
+      type = "sketch";
+    } else { // U_FS
+      type = "filesystem";
+    }
+
+    // NOTE: if updating FS this would be the place to unmount FS using FS.end()
+    Serial.println("Start updating " + type);
+  });
+  ArduinoOTA.onEnd([]() {
+    Serial.println("\nEnd");
+  });
+  ArduinoOTA.onProgress([](unsigned int progress, unsigned int total) {
+    Serial.printf("Progress: %u%%\r", (progress / (total / 100)));
+  });
+  ArduinoOTA.onError([](ota_error_t error) {
+    Serial.printf("Error[%u]: ", error);
+    if (error == OTA_AUTH_ERROR) {
+      Serial.println("Auth Failed");
+    } else if (error == OTA_BEGIN_ERROR) {
+      Serial.println("Begin Failed");
+    } else if (error == OTA_CONNECT_ERROR) {
+      Serial.println("Connect Failed");
+    } else if (error == OTA_RECEIVE_ERROR) {
+      Serial.println("Receive Failed");
+    } else if (error == OTA_END_ERROR) {
+      Serial.println("End Failed");
+    }
+  });
+  ArduinoOTA.begin();
 
   server.begin();
-  pixels.fill(pixels.Color(luminosite,0,0));
+  pixels.fill(pixels.Color(luminosite,luminosite,0));
 }
 
 void loop() {
+
+  ArduinoOTA.handle();
 
   WiFiClient client = server.available(); 
 
@@ -123,7 +159,7 @@ void loop() {
 void clignotement(){
   restore();
   for( short i = 0 ; i < NUMPIXELS ; i++){
-    pixels.setPixelColor(i, pixels.Color(luminosite, 0, 0));
+    pixels.setPixelColor(i, pixels.Color(luminosite,0, 0));
   }
   pixels.show();
   delay(500);
@@ -211,4 +247,3 @@ void fade(short start, short end, short pourcentage_R, short pourcentage_G, shor
   }
 
 }
-
