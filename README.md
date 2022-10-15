@@ -41,3 +41,11 @@ Mon premier test d'autonomie, donne environ 10 heures d'éclairage en utilisatio
 - Test consommation : 0.36A -> consommation led R 240
 - Test consommation : 0.16A -> consommation led R 20
 
+---
+# 15/10/22
+J'ai utilisé pour la première fois la lumière sous la pluie. Je n'ai pas eu de problème et malgré l'exposition à une forte pluie et l'humidité pedant plusieurs heures, la lumière fonctionne toujours correctement.
+
+Un premier léger problème s'est révélé, un des rings de led s'est légèrement déboité du boitier. Mais j'ai pu la remettre en place. Pour la prochaine version il faudra peut être coller le ring ou revoir la conception 3D.
+
+Jusque-là, je n'ai pas eu besoin de recharger la lumière, je l'ai utilisé environ 4h00.
+
