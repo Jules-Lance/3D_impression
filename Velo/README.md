@@ -1,3 +1,8 @@
+<p align="center">
+  <img src=velo.jpg height = "400">
+  <img src=velo2.jpg height = "400">
+</p>
+
 # Projet Personnel : Lumière arrière de vélo 
 
 C'est un projet qui me tient particulièrement à coeur et que je réalise sur mon temps libre. En effet habitant dans une ville où le vélo étant mon moyen de transport principal, il me faut un moyen d'éclairage de nuit fiable et efficace.
