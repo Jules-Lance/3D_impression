@@ -49,3 +49,16 @@ Un premier léger problème s'est révélé, un des rings de led s'est légèrem
 
 Jusque-là, je n'ai pas eu besoin de recharger la lumière, je l'ai utilisé environ 4h00.
 
+---
+# 18/11/22
+La lampe est tombé en panne de batterie. Comme prévu j'ai bien pu la recharger via son port USB C.
+En plus d'un mois d'utilisation, je n'ai pas rencontré de soucis importants. Hormis que système de fixation n'est pas optimal.
+
+De plus il faudrait coller les ring LED, puisqu'un c'est "déclipsé", et tenait plus qu'avec les câbles. Cela est surement dû aux vibrations lors de mon parcours en vélo.
+
+---
+# 27/11/22
+Afin de régler les problèmes de fixation, je décide d'adapter la lumière au système de fixation des lumières de mon vélo. J'en ai également profité pour faire un boiter bien plus volumineux qui me permettra de rentrer plus facilement les composants à l'intérieur. Le boitier reprend principalement la même architecture que les V1 et V2.
+
+
+
