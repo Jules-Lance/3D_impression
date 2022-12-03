@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=etagere.jpg >
+  <img src=etagere.jpg height = "400" >
 </p>
 
 # Domotique
