@@ -6,6 +6,9 @@
 
 Pour rajouter une lumière d'ambiance, j'ai ajouté un ruban de LED ws2812b contrôlable via HomeAssistant et EspHome.
 
+Le tout est relié à l'éclairage principal de la pièce, donc s'allume en même temps, et par défaut en bleu comme sur la photo.
+Mais via l'interface HomeAssistant, il est possible de choisir la couleur voulue, des modes prédéfinies comme : rainbow, pulse...etc
+
 Matériel : 
 - Alimentation 5V 10A ( j'ai bridé la luminosité maximale du bandeau)
 - ESP32
