@@ -60,7 +60,7 @@ De plus il faudrait coller les ring LED, puisqu'un c'est "déclipsé", et tenait
 
 ---
 # 27/11/22
-Afin de régler les problèmes de fixation, je décidé d'adapter la lumière au système de fixation des lumières de mon vélo. J'en ai également profité pour faire un boiter bien plus volumineux qui me permettra de rentrer plus facilement les composants à l'intérieur. Le boitier reprend principalement la même architecture que les V1 et V2.
+Afin de régler les problèmes de fixation, j'ai décidé d'adapter la lumière au système de fixation des lumières de mon vélo. J'en ai également profité pour faire un boiter bien plus volumineux qui me permettra de rentrer plus facilement les composants à l'intérieur. Le boitier reprend principalement la même architecture que les V1 et V2.
 
 
 
