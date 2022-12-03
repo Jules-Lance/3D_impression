@@ -2,6 +2,7 @@
 
 <p align="center">
   <img src=imprimante.jpg height = "400">
+  <img src=imprimante2.jpg height = "400">
 </p>
 
 ---
