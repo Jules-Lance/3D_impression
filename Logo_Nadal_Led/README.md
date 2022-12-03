@@ -15,6 +15,8 @@ Que j'ai ensuite adapté pour faire rentrer la partie en silicone.
 Pour la partie gestion, j'ai utilisé un ESP8266. Pour faire une interface web utilisable via téléphone. 
 J'avais utilisé le framework Arduino afin de réaliser le code, en me servant de LittleFS, AsyncWebServer, et en réalisant la page via du HTMl, CSS , Javascript.
 
+L'interface permettait plusieurs mode de fonctionnement : Rainbow, Pulse, Fixe ... etc, de régler la couleur, ainsi que la luminosité.
+
 ---
 # Pièce utilisé
 
