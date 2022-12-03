@@ -30,9 +30,6 @@ Hardware :
 Pour la partie software, je programme esp8266 en utilisant Arduino IDE. L'objectif est de pouvoir contrôler la lumière par Wi-Fi. Pour l'instant la seul fonctionnalité est le contrôle de l'intensité lumineuse de la lumière.
 Mais par la suite je pense rajouter une fonctionnalité de clignotant, un suivi de vitesse, ainsi qu'un indicateur de batterie.
 
-Pour la partie impression 3D, j'utilise comme logiciel de conception 3D soit Shapr3D qui est disponible sur l'Ipad et que je recommande pour sa simplicité d'utilisation et sa fluidité, soit Fusion360 mais que j'utilise de moins en moins.
-Comme imprimante 3D j'utilise la Voron 2.4, une imprimante 3D OpenSource très fiable et rapide mais à fabriquer soi-même. Ce que je recommande fortement si vous avez du temps pour la fabriquer (20h-60h) ainsi que les moyens de vous l'offrir (800€ - 1500€), à savoir que cette imprimante est uniquement vendue sous kit. Pour slicer mes fichiers 3D, j'utilise SuperSlicer, qui est un fork de PrusaSlicer.
-
 J'utilise pour ce projet du filament ABS Sunlu noir 1.75 mm, je l'ai choisi pour sa résistance à la chaleur, sa résistance, mais surtout pour sa capacité à être lissé à l'acétone pour l'aspect esthétique. En alternative je recommanderai l'utilisation de PETG.
 
 Si j'ai le temps je mettrai en ligne un schéma du câblage. Ainsi que mes options de slicer.
@@ -63,7 +60,7 @@ De plus il faudrait coller les ring LED, puisqu'un c'est "déclipsé", et tenait
 
 ---
 # 27/11/22
-Afin de régler les problèmes de fixation, je décide d'adapter la lumière au système de fixation des lumières de mon vélo. J'en ai également profité pour faire un boiter bien plus volumineux qui me permettra de rentrer plus facilement les composants à l'intérieur. Le boitier reprend principalement la même architecture que les V1 et V2.
+Afin de régler les problèmes de fixation, je décidé d'adapter la lumière au système de fixation des lumières de mon vélo. J'en ai également profité pour faire un boiter bien plus volumineux qui me permettra de rentrer plus facilement les composants à l'intérieur. Le boitier reprend principalement la même architecture que les V1 et V2.
 
 
 
