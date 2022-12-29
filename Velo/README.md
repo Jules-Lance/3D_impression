@@ -13,7 +13,7 @@ Les caractéristiques que la lumière doit avoir :
 - Les doivent être addressable afin de pouvoir faire varier la couleur ainsi que l'intensité
 - Autonomie dépassant 4 heures d'autonomie en utilisation normale
 - Etre rechargeable en USB-C
-- Esthétisme convenable
+- Esthétique convenable
 - Pouvoir résister aux éclaboussures/ la pluie
 - Pouvoir résister au soleil
 
